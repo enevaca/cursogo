@@ -10,10 +10,12 @@ func main() {
   name := getName()
   number := sum(50, 50) 
   a, b, c := getVariables()
+  f32, f64 := getFloat()
   
   fmt.Printf(helloWorld, name, lastname)
   fmt.Println("Hola mundo")
   fmt.Println(number, a, b, c)
+  fmt.Println(f32, f64)
 }
 
 func getName() string {
@@ -24,8 +26,12 @@ func getName() string {
   return name
 }
 
-func getVariables() (int, int, int) {
-  return 1, 2, 3
+func getVariables() (int, int32, int64) {
+  return 1, 2147000000, 93131313131313131
+}
+
+func getFloat() (float32, float64) {
+	return float32(0.1), float64(float32(0.1))
 }
 
 func sum(a int, b int) int {
