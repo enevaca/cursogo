@@ -11,11 +11,17 @@ func main() {
   number := sum(50, 50) 
   a, b, c := getVariables()
   f32, f64 := getFloat()
+  stringUTF8 := getUnicode()
   
   fmt.Printf(helloWorld, name, lastname)
   fmt.Println("Hola mundo")
   fmt.Println(number, a, b, c)
   fmt.Println(f32, f64)
+  fmt.Println("Cadena con UTF8: ", stringUTF8)
+  fmt.Println(string("hola"[0]))
+  fmt.Println("Cantidad de caracteres de hola: ", len("hola"))
+  getArray()
+  getSlice()
 }
 
 func getName() string {
@@ -36,4 +42,22 @@ func getFloat() (float32, float64) {
 
 func sum(a int, b int) int {
   return a + b	
+}
+
+func getUnicode() string {
+  return "もしもし！"
+}
+
+func getArray() {
+	var arr1 [2]string
+	arr2 := [3]int{1, 2, 3}
+	arr1[0] = "array"
+	arr1[1] = "array2"
+	fmt.Println(arr1, arr2)
+}
+
+func getSlice() {
+	var slice1 []string
+	slice1 = append(slice1, "mi", "slice", "1")
+	fmt.Println(slice1)
 }
