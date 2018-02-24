@@ -1,2 +1,6 @@
 root@NOEL-PC:/mnt/d/platzi/Curso de Programación en Go/go/src/github.com/enevaca/gocurso# export PATH=$PATH:/usr/local/go/bin
 root@NOEL-PC:/mnt/d/platzi/Curso de Programación en Go/go/src/github.com/enevaca/gocurso# export GOPATH=/mnt/d/platzi/Curso\ de\ Programación\ en\ Go/go
+
+root@NOEL-PC:~# export GOPATH=/root/go
+root@NOEL-PC:~/go/src/github.com/enevaca/gocurso# cp -R /mnt/d/platzi/Curso\ de\ Programación\ en\ Go/go /root/go
+
