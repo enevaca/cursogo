@@ -6,9 +6,19 @@ import (
 	/*"github.com/enevaca/gocurso/flow"
 	  "github.com/enevaca/gocurso/name"
 	  "github.com/enevaca/gocurso/numbers"
-	  "github.com/enevaca/gocurso/structs"*/
-	"github.com/enevaca/gocurso/maps"
+	  "github.com/enevaca/gocurso/structs"
+	"github.com/enevaca/gocurso/maps"*/
 )
+
+type PlatziCourse struct {
+	Name string
+	Slug string
+	Skills []string
+}
+
+type PlaziCareer struct {
+	PlatziCourse
+}
 
 const helloWorld string = "Hola %s %s,  bienvenido al fascinante mundo de Go\n"
 const testConst = "Test"
@@ -34,7 +44,13 @@ func main() {
 	  forTest()
 	  string2()
 	  flow.SwitchTest()*/
-	fmt.Println(maps.GetMap("Esnor"))
+	//fmt.Println(maps.GetMap("Esnor"))
+	platiCourse := PlatziCourse{Name: "Go", Slug: "go",  Skills: []string{"backend", "2", "3"}}
+	platiCourse1 := new(PlatziCourse)
+	platiCourse1.Name = "Go1"
+	platiCourse1.Slug = "go1"
+	platiCourse1.Skills = []string{"backend1"}
+	fmt.Println(platiCourse, platiCourse1)
 }
 
 func forTest() {
