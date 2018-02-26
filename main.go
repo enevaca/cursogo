@@ -16,6 +16,10 @@ type PlatziCourse struct {
 	Skills []string
 }
 
+func (p PlatziCourse) Subscribe(name string) {
+	fmt.Printf("La persona %s se ha registrado al curso %s\n", name, p.Name)
+}
+
 type PlaziCareer struct {
 	PlatziCourse
 }
@@ -46,11 +50,12 @@ func main() {
 	  flow.SwitchTest()*/
 	//fmt.Println(maps.GetMap("Esnor"))
 	platiCourse := PlatziCourse{Name: "Go", Slug: "go",  Skills: []string{"backend", "2", "3"}}
-	platiCourse1 := new(PlatziCourse)
+	/*platiCourse1 := new(PlatziCourse)
 	platiCourse1.Name = "Go1"
 	platiCourse1.Slug = "go1"
-	platiCourse1.Skills = []string{"backend1"}
-	fmt.Println(platiCourse, platiCourse1)
+	platiCourse1.Skills = []string{"backend1"}*/
+	platiCourse.Subscribe("Esnor")
+	fmt.Println(platiCourse)
 }
 
 func forTest() {
