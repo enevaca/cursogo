@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"strings"
-	"github.com/enevaca/gocurso/numbers"
-	//"github.com/enevaca/gocurso/structs" 
 	//"github.com/enevaca/gocurso/structs"
 	/*"github.com/enevaca/gocurso/flow"
 	  "github.com/enevaca/gocurso/name"
@@ -41,12 +39,13 @@ func main() {
 	  flow.SwitchTest()*/
 	//fmt.Println(maps.GetMap("Esnor"))
 	//structs.InterfaceTest()
-	number, err := numbers.Sum(50, 50)
+	/*number, err := numbers.Sum(50, 50)
 
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(number)
+	fmt.Println(number)*/
+	pointerTest()
 }
 
 
@@ -57,4 +56,22 @@ func string2() {
 	fmt.Println(strings.Replace(text, "Hello", "Hola", -1))
 	fmt.Println(strings.Split(text, ","))
 
+}
+
+func pointerTest() {
+	a := 100
+	var b *int
+	b = &a
+	fmt.Println("Sin modificar")
+	fmt.Println(a, *b)
+	fmt.Println(&a, b)
+	//*b = 10
+	pointerModify(b)
+	fmt.Println("Con una modificación")
+	fmt.Println(a, *b)
+	fmt.Println(&a, b)
+}
+
+func pointerModify(c *int) {
+	*c = 10
 }
