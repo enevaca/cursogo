@@ -3,26 +3,16 @@ package main
 import (
 	"fmt"
 	"strings"
+	"github.com/enevaca/gocurso/structs" 
+	//"github.com/enevaca/gocurso/structs"
 	/*"github.com/enevaca/gocurso/flow"
 	  "github.com/enevaca/gocurso/name"
 	  "github.com/enevaca/gocurso/numbers"
 	  "github.com/enevaca/gocurso/structs"
-	"github.com/enevaca/gocurso/maps"*/
+	  "github.com/enevaca/gocurso/maps"*/
 )
 
-type PlatziCourse struct {
-	Name string
-	Slug string
-	Skills []string
-}
 
-func (p PlatziCourse) Subscribe(name string) {
-	fmt.Printf("La persona %s se ha registrado al curso %s\n", name, p.Name)
-}
-
-type PlaziCareer struct {
-	PlatziCourse
-}
 
 const helloWorld string = "Hola %s %s,  bienvenido al fascinante mundo de Go\n"
 const testConst = "Test"
@@ -49,35 +39,9 @@ func main() {
 	  string2()
 	  flow.SwitchTest()*/
 	//fmt.Println(maps.GetMap("Esnor"))
-	platiCourse := PlatziCourse{Name: "Go", Slug: "go",  Skills: []string{"backend", "2", "3"}}
-	/*platiCourse1 := new(PlatziCourse)
-	platiCourse1.Name = "Go1"
-	platiCourse1.Slug = "go1"
-	platiCourse1.Skills = []string{"backend1"}*/
-	platiCourse.Subscribe("Esnor")
-	fmt.Println(platiCourse)
+	structs.InterfaceTest()
 }
 
-func forTest() {
-	for i := 0; i < 5; i++ {
-		fmt.Println("[FOR] ", i)
-	}
-
-	c := 100
-	for c > 0 {
-		c -= 10
-		fmt.Println("[FOR] Solo con una condicion de c > 0, ", c)
-	}
-
-	s := 1000
-	for {
-		s -= 1
-		if s == 0 {
-			fmt.Println("Termina el for 'infinito'")
-			break
-		}
-	}
-}
 
 func string2() {
 	var text = "Hello world, Hello Platzi, Hello Go"
