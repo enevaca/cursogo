@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
-	"github.com/enevaca/gocurso/structs" 
+	"github.com/enevaca/gocurso/numbers"
+	//"github.com/enevaca/gocurso/structs" 
 	//"github.com/enevaca/gocurso/structs"
 	/*"github.com/enevaca/gocurso/flow"
 	  "github.com/enevaca/gocurso/name"
@@ -39,7 +40,13 @@ func main() {
 	  string2()
 	  flow.SwitchTest()*/
 	//fmt.Println(maps.GetMap("Esnor"))
-	structs.InterfaceTest()
+	//structs.InterfaceTest()
+	number, err := numbers.Sum(50, 50)
+
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(number)
 }
 
 
