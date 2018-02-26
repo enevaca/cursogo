@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"time"
 	//"github.com/enevaca/gocurso/structs"
 	/*"github.com/enevaca/gocurso/flow"
 	  "github.com/enevaca/gocurso/name"
@@ -45,7 +46,10 @@ func main() {
 		panic(err)
 	}
 	fmt.Println(number)*/
-	pointerTest()
+	//pointerTest()
+	go forGo(500)
+	go forGo(400)
+	time.Sleep(1000 * time.Millisecond)
 }
 
 
@@ -74,4 +78,14 @@ func pointerTest() {
 
 func pointerModify(c *int) {
 	*c = 10
+}
+
+func helloGo(index int) {
+	fmt.Println("Hola soy un print en la Go rutine # ", index)
+}
+
+func forGo(n int) {
+	for i := 0; i < n; i++ {
+		go helloGo(i)
+	}
 }
